@@ -170,10 +170,5 @@ async def handle_price_b(message: types.Message, state: FSMContext):
     finally:
         await state.clear()
 
-    from keep_alive import keep_alive
-
-if __name__ == "__main__":
-    keep_alive()  # запускаем Flask-сервер
-    asyncio.run(dp.start_polling(bot))  # запускаем Telegram-бота
-
-                                                              
+if __name__ == '__main__':
+    asyncio.run(dp.start_polling(bot))
